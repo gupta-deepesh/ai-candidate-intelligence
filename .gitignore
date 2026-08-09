@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+application-local.yml
+
+# Temporary
+*.tmp
+*.swp
+
+# Java
+hs_err_pid*
+replay_pid*

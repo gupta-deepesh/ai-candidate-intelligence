@@ -1,0 +1,18 @@
+Senior Java / AWS Engineer
+
+We are looking for:
+- Java 17
+- Spring Boot
+- Microservices
+- REST APIs
+- AWS Lambda
+- ECS / Fargate
+- SQS
+- Terraform
+- Docker
+- SQL
+- Redis
+- Kubernetes / EKS
+- Kafka
+- CI/CD
+- Technical leadership
