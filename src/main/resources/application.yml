@@ -27,9 +27,3 @@ spring:
 app:
   ai:
     mock: ${APP_AI_MOCK:false}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
