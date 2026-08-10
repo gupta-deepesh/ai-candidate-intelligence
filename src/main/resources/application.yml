@@ -1,13 +1,20 @@
 server:
+  address: 0.0.0.0
   port: ${PORT:8080}
 
 spring:
   application:
     name: ai-resume-analyzer
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
+
   servlet:
     multipart:
       max-file-size: 10MB
       max-request-size: 12MB
+
   ai:
     anthropic:
       api-key: ${ANTHROPIC_API_KEY:demo-key-not-used-in-mock-mode}
@@ -22,10 +29,6 @@ app:
     mock: ${APP_AI_MOCK:false}
 
 management:
-  metrics:
-    binders:
-      processor:
-        enabled: false
   endpoints:
     web:
       exposure:
