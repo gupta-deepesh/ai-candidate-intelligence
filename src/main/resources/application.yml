@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT:8080}
+  port: ${PORT:8080}
 
 spring:
   application:
@@ -22,6 +22,10 @@ app:
     mock: ${APP_AI_MOCK:false}
 
 management:
+  metrics:
+    binders:
+      processor:
+        enabled: false
   endpoints:
     web:
       exposure:
