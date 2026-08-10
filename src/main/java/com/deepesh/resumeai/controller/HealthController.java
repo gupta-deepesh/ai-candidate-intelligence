@@ -17,10 +17,6 @@ public class HealthController {
 
     @GetMapping("/health")
     public Map<String, Object> health() {
-        return Map.of(
-                "status", "UP",
-                "application", "AI Resume Analyzer",
-                "mockMode", mockMode,
-                "timestamp", Instant.now().toString());
+        return Map.of("status", "UP", "application", "AI Resume Analyzer", "mockMode", mockMode, "timestamp", Instant.now().toString());
     }
 }

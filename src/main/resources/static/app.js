@@ -7,6 +7,9 @@ const dropZone =
 const jobDescription =
     document.getElementById("jobDescription");
 
+const topExportPdfBtn =
+    document.getElementById("topExportPdfBtn");
+
 const analyzeButton =
     document.getElementById("analyzeButton");
 
@@ -25,8 +28,8 @@ const startAnalysisButton =
 const analyzeAnotherButton =
     document.getElementById("analyzeAnotherButton");
 
-const downloadJsonButton =
-    document.getElementById("downloadJsonButton");
+const exportPdfBtn =
+    document.getElementById("exportPdfBtn");
 
 const loadingOverlay =
     document.getElementById("loadingOverlay");
@@ -367,7 +370,7 @@ async function analyzeResume() {
                 "analysisTypeBadge"
             )
             .textContent =
-                "CLAUDE LIVE";
+            "CLAUDE LIVE";
 
 
         updateDurationBadge(
@@ -651,7 +654,7 @@ async function runDemo() {
             "analysisTypeBadge"
         )
         .textContent =
-            "SAMPLE DEMO";
+        "SAMPLE DEMO";
 
 
     if (analysisDurationBadge) {
@@ -1511,7 +1514,7 @@ function updateRecommendation(
 
 
     switch (
-        recommendation
+    recommendation
     ) {
 
         case "STRONG MATCH":
@@ -2179,40 +2182,137 @@ async function copyList(id) {
     }
 }
 
-
 /* ========================================================= */
-/* EXPORT JSON */
+/* EXPORT PDF */
 /* ========================================================= */
 
-downloadJsonButton.addEventListener(
-    "click",
-    () => {
+if (exportPdfBtn) {
 
-        if (!lastAnalysis) {
+    exportPdfBtn.addEventListener(
+        "click",
+        exportPdf
+    );
+}
+if (topExportPdfBtn) {
 
-            showMessage(
-                "Run an analysis before exporting."
+    topExportPdfBtn.addEventListener(
+        "click",
+        exportPdf
+    );
+}
+
+
+async function exportPdf() {
+
+    if (!lastAnalysis) {
+
+        showMessage(
+            "Run an analysis before exporting."
+        );
+
+        return;
+    }
+
+
+    const exportButtons =
+        [
+            exportPdfBtn,
+            topExportPdfBtn
+        ].filter(Boolean);
+
+    const originalLabels =
+        exportButtons.map(
+            button => button.textContent
+        );
+
+
+    try {
+
+        exportButtons.forEach(
+            button => {
+
+                button.disabled =
+                    true;
+
+                button.textContent =
+                    "Generating PDF...";
+            }
+        );
+
+
+        const response =
+            await fetch(
+                "/api/reports/pdf",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify(
+                            lastAnalysis
+                        )
+                }
             );
 
 
-            return;
+        if (!response.ok) {
+
+            let errorMessage =
+                "Unable to generate PDF.";
+
+            try {
+
+                const body =
+                    await response.json();
+
+                if (body?.message) {
+
+                    errorMessage =
+                        body.message;
+                }
+
+            } catch {
+
+                try {
+
+                    const body =
+                        await response.text();
+
+                    if (body) {
+
+                        errorMessage =
+                            body;
+                    }
+
+                } catch {
+                    // Keep default message.
+                }
+            }
+
+
+            throw new Error(
+                errorMessage
+            );
         }
 
 
         const blob =
-            new Blob(
-                [
-                    JSON.stringify(
-                        lastAnalysis,
-                        null,
-                        2
-                    )
-                ],
-                {
-                    type:
-                        "application/json"
-                }
+            await response.blob();
+
+
+        if (
+            !blob
+            || blob.size === 0
+        ) {
+
+            throw new Error(
+                "The generated PDF was empty."
             );
+        }
 
 
         const url =
@@ -2232,7 +2332,7 @@ downloadJsonButton.addEventListener(
 
 
         link.download =
-            `candidate-analysis-${dateStamp()}.json`;
+            `candidate-intelligence-report-${dateStamp()}.pdf`;
 
 
         document.body
@@ -2247,11 +2347,55 @@ downloadJsonButton.addEventListener(
         link.remove();
 
 
-        URL.revokeObjectURL(
-            url
+        /*
+         * Give the browser a moment to start
+         * downloading before releasing the URL.
+         */
+        setTimeout(
+            () => {
+
+                URL.revokeObjectURL(
+                    url
+                );
+
+            },
+            1000
+        );
+
+
+        showSuccessMessage(
+            "PDF report downloaded."
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "PDF export failed:",
+            error
+        );
+
+
+        showMessage(
+            error.message
+            || "Unable to export the report as PDF."
+        );
+
+
+    } finally {
+
+        exportButtons.forEach(
+            (button, index) => {
+
+                button.disabled =
+                    false;
+
+                button.textContent =
+                    originalLabels[index];
+            }
         );
     }
-);
+}
 
 
 /* ========================================================= */
@@ -2457,20 +2601,20 @@ function dateStamp() {
         String(
             now.getMonth() + 1
         )
-        .padStart(
-            2,
-            "0"
-        );
+            .padStart(
+                2,
+                "0"
+            );
 
 
     const day =
         String(
             now.getDate()
         )
-        .padStart(
-            2,
-            "0"
-        );
+            .padStart(
+                2,
+                "0"
+            );
 
 
     return `${year}-${month}-${day}`;

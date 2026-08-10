@@ -13,16 +13,12 @@ public class ResumeAnalysisService {
     private final ResumeParserService resumeParserService;
     private final ResumeAnalyzer resumeAnalyzer;
 
-    public ResumeAnalysisService(
-            ResumeParserService resumeParserService,
-            ResumeAnalyzer resumeAnalyzer) {
+    public ResumeAnalysisService(ResumeParserService resumeParserService, ResumeAnalyzer resumeAnalyzer) {
         this.resumeParserService = resumeParserService;
         this.resumeAnalyzer = resumeAnalyzer;
     }
 
-    public ResumeAnalysisResponse analyze(
-            MultipartFile resume,
-            String jobDescription) {
+    public ResumeAnalysisResponse analyze(MultipartFile resume, String jobDescription) {
 
         if (jobDescription == null || jobDescription.isBlank()) {
             throw new InvalidResumeException("Job description is required.");

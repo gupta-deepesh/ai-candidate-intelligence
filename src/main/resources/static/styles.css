@@ -82,22 +82,16 @@ button:hover {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            circle at 85% 20%,
+        radial-gradient(circle at 85% 20%,
             rgba(59, 130, 246, .22),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 10% 100%,
+            transparent 30%),
+        radial-gradient(circle at 10% 100%,
             rgba(79, 70, 229, .12),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
+            transparent 32%),
+        linear-gradient(135deg,
             #0b1220 0%,
             #172542 55%,
-            #273b73 100%
-        );
+            #273b73 100%);
 
     color: white;
     padding: 18px 0 22px;
@@ -106,8 +100,7 @@ button:hover {
 .hero-layout {
     display: grid;
     grid-template-columns:
-        minmax(0, 1.12fr)
-        minmax(260px, .72fr);
+        minmax(0, 1.12fr) minmax(260px, .72fr);
 
     align-items: center;
     gap: 30px;
@@ -131,11 +124,9 @@ button:hover {
     border-radius: 10px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #60a5fa,
-            #4f46e5
-        );
+            #4f46e5);
 
     font-size: 12px;
     font-weight: 900;
@@ -257,7 +248,7 @@ button:hover {
 .hero-preview {
     width: 100%;
     max-width: 450px;
-    align-self:center;
+    align-self: center;
     justify-self: end;
 }
 
@@ -582,8 +573,7 @@ main {
     display: grid;
 
     grid-template-columns:
-        minmax(0, .85fr)
-        minmax(0, 1.15fr);
+        minmax(0, .85fr) minmax(0, 1.15fr);
 
     gap: 22px;
 }
@@ -826,18 +816,18 @@ textarea:focus {
 
 .results-heading {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-
     margin: 38px 0 18px;
+}
+
+.results-heading>div {
+    width: 100%;
 }
 
 .results-heading h2 {
     margin: 5px 0 0;
-
     font-size: 28px;
-
     letter-spacing: -.025em;
 }
 
@@ -848,11 +838,9 @@ textarea:focus {
 
 .recruiter-snapshot {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #ffffff,
-            #f7faff
-        );
+            #f7faff);
 
     border-color: #d9e5f5;
 }
@@ -875,7 +863,7 @@ textarea:focus {
     background: white;
 }
 
-.snapshot-card > span {
+.snapshot-card>span {
     display: block;
 
     margin-bottom: 8px;
@@ -982,11 +970,9 @@ textarea:focus {
     border-radius: 19px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #111827,
-            #1c2c50
-        );
+            #1c2c50);
 
     color: white;
 
@@ -994,7 +980,7 @@ textarea:focus {
         0 12px 30px rgba(15, 23, 42, .12);
 }
 
-.score-card > span {
+.score-card>span {
     color: #b9c5db;
 
     font-size: 12px;
@@ -1042,11 +1028,9 @@ textarea:focus {
 
 .recommendation-card {
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #1e293b,
-            #273b73
-        );
+            #273b73);
 }
 
 .recommendation-card strong {
@@ -1251,11 +1235,9 @@ textarea:focus {
     gap: 25px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             white,
-            #f6f8ff
-        );
+            #f6f8ff);
 }
 
 .export-panel h2 {
@@ -1270,10 +1252,46 @@ textarea:focus {
 
 .export-actions {
     display: flex;
-
+    align-items: center;
+    justify-content: flex-end;
     gap: 10px;
-
     flex-wrap: wrap;
+}
+
+.primary-action-button,
+.secondary-action-button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-action-button {
+    border: 1px solid #3568f0;
+    background: #3568f0;
+    color: #ffffff;
+}
+
+.secondary-action-button {
+    border: 1px solid #cfd7e6;
+    background: #f6f8fc;
+    color: #17233d;
+}
+
+.primary-action-button:hover,
+.secondary-action-button:hover {
+    transform: translateY(-1px);
+}
+
+.primary-action-button:disabled,
+.secondary-action-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
 }
 
 
@@ -1394,7 +1412,7 @@ footer strong {
     margin: 0 0 7px;
 }
 
-.loading-card > p {
+.loading-card>p {
     margin: 0 0 18px;
 
     color: var(--muted);
@@ -1625,6 +1643,20 @@ footer strong {
     }
 }
 
+@media (max-width: 720px) {
+
+    .analysis-meta-row {
+        flex-wrap: wrap;
+    }
+
+    .analysis-meta-row .analysis-meta {
+        flex-wrap: wrap;
+    }
+
+    .analysis-meta-row .secondary-action-button {
+        width: auto;
+    }
+}
 
 @media (max-width: 720px) {
 
@@ -1698,5 +1730,12 @@ footer strong {
 
     .hero-actions button {
         width: 100%;
+    }
+
+    .analysis-meta .secondary-action-button {
+        min-height: 32px;
+        padding: 6px 12px;
+        font-size: 11px;
+        flex-shrink: 0;
     }
 }

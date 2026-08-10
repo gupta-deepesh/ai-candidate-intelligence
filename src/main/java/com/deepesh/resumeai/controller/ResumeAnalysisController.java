@@ -20,14 +20,9 @@ public class ResumeAnalysisController {
         this.resumeAnalysisService = resumeAnalysisService;
     }
 
-    @PostMapping(
-            value = "/analyze",
-            consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResumeAnalysisResponse analyze(
-            @RequestPart("resume") MultipartFile resume,
-            @RequestParam("jobDescription")
-            @NotBlank(message = "Job description is required") String jobDescription) {
+    @PostMapping(value = "/analyze", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResumeAnalysisResponse analyze(@RequestPart("resume") MultipartFile resume,
+            @RequestParam("jobDescription") @NotBlank(message = "Job description is required") String jobDescription) {
 
         return resumeAnalysisService.analyze(resume, jobDescription);
     }

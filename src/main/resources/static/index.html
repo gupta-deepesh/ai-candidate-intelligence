@@ -7,8 +7,7 @@
 
     <title>AI Candidate Intelligence Platform</title>
 
-    <meta
-        name="description"
+    <meta name="description"
         content="AI-powered candidate intelligence platform built with Java 17, Spring Boot, Spring AI and Anthropic Claude.">
 
     <link rel="stylesheet" href="/styles.css">
@@ -16,1121 +15,1033 @@
 
 <body>
 
-<!-- ====================================================== -->
-<!-- HERO -->
-<!-- ====================================================== -->
+    <!-- ====================================================== -->
+    <!-- HERO -->
+    <!-- ====================================================== -->
 
-<header class="hero">
+    <header class="hero">
 
-    <div class="container hero-layout">
+        <div class="container hero-layout">
 
-        <div class="hero-copy">
+            <div class="hero-copy">
 
-            <div class="brand">
+                <div class="brand">
 
-                <div class="brand-mark">
-                    AI
-                </div>
-
-                <div>
-                    <strong>
-                        AI Candidate Intelligence
-                    </strong>
-
-                    <span>
-                        Evidence-based resume and job evaluation
-                    </span>
-                </div>
-
-            </div>
-
-            <span class="eyebrow">
-                JAVA 17 · SPRING BOOT · SPRING AI · CLAUDE
-            </span>
-
-            <h1>
-                Evaluate candidate-job fit
-                <span>with explainable AI.</span>
-            </h1>
-
-            <p class="hero-description">    
-                Compare resumes against job descriptions using Claude AI. Generate recruiter-ready candidate intelligence, ATS insights, evidence mapping, and interview guidance.
-            </p>
-
-            <div class="hero-actions">
-
-                <button
-                    id="startAnalysisButton"
-                    class="primary hero-button">
-                    Analyze Resume
-                </button>
-
-                <button
-                    id="tryDemoButton"
-                    class="demo-button">
-                    ▶ Try Live Demo
-                </button>
-
-            </div>
-
-            <p class="hero-note">
-                Demo uses sample data and does not consume AI credits.
-            </p>
-
-        </div>
-
-
-        <!-- ================================================== -->
-        <!-- HERO PREVIEW -->
-        <!-- ================================================== -->
-
-        <div class="hero-preview">
-
-            <div class="preview-window">
-
-                <div class="preview-header">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <strong>
-                        Candidate Intelligence
-                    </strong>
-
-                </div>
-
-
-                <div class="preview-score-row">
-
-                    <div>
-                        <span>Job Match</span>
-                        <strong>91%</strong>
+                    <div class="brand-mark">
+                        AI
                     </div>
 
                     <div>
-                        <span>ATS Score</span>
-                        <strong>89%</strong>
+                        <strong>
+                            AI Candidate Intelligence
+                        </strong>
+
+                        <span>
+                            Evidence-based resume and job evaluation
+                        </span>
                     </div>
 
                 </div>
 
+                <span class="eyebrow">
+                    JAVA 17 · SPRING BOOT · SPRING AI · CLAUDE
+                </span>
 
-                <div class="preview-block">
+                <h1>
+                    Evaluate candidate-job fit
+                    <span>with explainable AI.</span>
+                </h1>
 
-                    <span class="preview-label">
-                        HIRING RECOMMENDATION
-                    </span>
+                <p class="hero-description">
+                    Compare resumes against job descriptions using Claude AI. Generate recruiter-ready candidate
+                    intelligence, ATS insights, evidence mapping, and interview guidance.
+                </p>
 
-                    <strong class="preview-recommendation">
-                        STRONG MATCH
-                    </strong>
+                <div class="hero-actions">
+
+                    <button id="startAnalysisButton" class="primary hero-button">
+                        Analyze Resume
+                    </button>
+
+                    <button id="tryDemoButton" class="demo-button">
+                        ▶ Try Live Demo
+                    </button>
 
                 </div>
 
-
-                <div class="preview-block">
-
-                    <span class="preview-label">
-                        TRANSFERABLE EXPERIENCE
-                    </span>
-
-                    <div class="preview-chip-row">
-
-                        <span>
-                            Event-Driven Architecture
-                        </span>
-
-                        <span>
-                            Cloud-Native AWS
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- ====================================================== -->
-<!-- FEATURE STRIP -->
-<!-- ====================================================== -->
-
-<section class="feature-strip">
-
-    <div class="container feature-grid">
-
-        <article>
-
-            <div class="feature-icon">
-                01
-            </div>
-
-            <div>
-                <strong>
-                    Candidate Match
-                </strong>
-
-                <span>
-                    Role-specific evaluation and scoring
-                </span>
-            </div>
-
-        </article>
-
-
-        <article>
-
-            <div class="feature-icon">
-                02
-            </div>
-
-            <div>
-                <strong>
-                    Critical Gaps
-                </strong>
-
-                <span>
-                    Required vs preferred requirements
-                </span>
-            </div>
-
-        </article>
-
-
-        <article>
-
-            <div class="feature-icon">
-                03
-            </div>
-
-            <div>
-                <strong>
-                    Resume Evidence
-                </strong>
-
-                <span>
-                    Explainable AI grounded in experience
-                </span>
-            </div>
-
-        </article>
-
-
-        <article>
-
-            <div class="feature-icon">
-                04
-            </div>
-
-            <div>
-                <strong>
-                    Actionable Guidance
-                </strong>
-
-                <span>
-                    Resume and interview recommendations
-                </span>
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ====================================================== -->
-<!-- MAIN ANALYZER -->
-<!-- ====================================================== -->
-
-<main
-    id="analyzer"
-    class="container">
-
-    <section class="panel input-panel">
-
-        <div class="section-title">
-
-            <div>
-
-                <span class="section-label">
-                    LIVE ANALYSIS
-                </span>
-
-                <h2>
-                    Analyze Candidate Fit
-                </h2>
-
-                <p>
-                    Upload a PDF resume and paste the job description.
+                <p class="hero-note">
+                    Demo uses sample data and does not consume AI credits.
                 </p>
 
             </div>
 
 
-            <div
-                id="modeBadge"
-                class="mode-badge">
-                Checking AI mode…
-            </div>
+            <!-- ================================================== -->
+            <!-- HERO PREVIEW -->
+            <!-- ================================================== -->
 
-        </div>
+            <div class="hero-preview">
 
+                <div class="preview-window">
 
-        <div class="privacy-notice">
+                    <div class="preview-header">
 
-            <strong>
-                Privacy:
-            </strong>
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
-            Resume files are processed for analysis and are not
-            intentionally persisted by this application.
+                        <strong>
+                            Candidate Intelligence
+                        </strong>
 
-        </div>
-
-
-        <div class="input-grid">
-
-            <div>
-
-                <label for="resume">
-                    Resume PDF
-                </label>
-
-                <div
-                    id="dropZone"
-                    class="drop-zone">
-
-                    <input
-                        id="resume"
-                        type="file"
-                        accept=".pdf,application/pdf">
-
-                    <div class="upload-icon">
-                        ↑
                     </div>
 
-                    <strong>
-                        Choose a resume
-                    </strong>
 
-                    <span>
-                        or drag and drop a PDF
-                    </span>
+                    <div class="preview-score-row">
 
-                    <small id="fileName">
-                        Maximum 10 MB
-                    </small>
+                        <div>
+                            <span>Job Match</span>
+                            <strong>91%</strong>
+                        </div>
+
+                        <div>
+                            <span>ATS Score</span>
+                            <strong>89%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="preview-block">
+
+                        <span class="preview-label">
+                            HIRING RECOMMENDATION
+                        </span>
+
+                        <strong class="preview-recommendation">
+                            STRONG MATCH
+                        </strong>
+
+                    </div>
+
+
+                    <div class="preview-block">
+
+                        <span class="preview-label">
+                            TRANSFERABLE EXPERIENCE
+                        </span>
+
+                        <div class="preview-chip-row">
+
+                            <span>
+                                Event-Driven Architecture
+                            </span>
+
+                            <span>
+                                Cloud-Native AWS
+                            </span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
-
-            <div>
-
-                <label for="jobDescription">
-                    Job Description
-                </label>
-
-                <textarea
-                    id="jobDescription"
-                    rows="16"
-                    placeholder="Paste the complete job description here..."></textarea>
-
-            </div>
-
         </div>
 
+    </header>
 
-        <div class="action-row">
 
-            <button
-                id="analyzeButton"
-                class="primary">
-                Analyze with Claude
-            </button>
+    <!-- ====================================================== -->
+    <!-- FEATURE STRIP -->
+    <!-- ====================================================== -->
 
-            <button
-                id="demoAnalysisButton"
-                class="demo-secondary">
-                ▶ Try Live Demo
-            </button>
+    <section class="feature-strip">
 
-            <button
-                id="resetButton"
-                class="secondary">
-                Reset
-            </button>
+        <div class="container feature-grid">
+
+            <article>
+
+                <div class="feature-icon">
+                    01
+                </div>
+
+                <div>
+                    <strong>
+                        Candidate Match
+                    </strong>
+
+                    <span>
+                        Role-specific evaluation and scoring
+                    </span>
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <div class="feature-icon">
+                    02
+                </div>
+
+                <div>
+                    <strong>
+                        Critical Gaps
+                    </strong>
+
+                    <span>
+                        Required vs preferred requirements
+                    </span>
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <div class="feature-icon">
+                    03
+                </div>
+
+                <div>
+                    <strong>
+                        Resume Evidence
+                    </strong>
+
+                    <span>
+                        Explainable AI grounded in experience
+                    </span>
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <div class="feature-icon">
+                    04
+                </div>
+
+                <div>
+                    <strong>
+                        Actionable Guidance
+                    </strong>
+
+                    <span>
+                        Resume and interview recommendations
+                    </span>
+                </div>
+
+            </article>
 
         </div>
-
-
-        <p
-            id="message"
-            class="message">
-        </p>
 
     </section>
 
 
-    <!-- ================================================== -->
-    <!-- RESULTS -->
-    <!-- ================================================== -->
+    <!-- ====================================================== -->
+    <!-- MAIN ANALYZER -->
+    <!-- ====================================================== -->
 
-    <section
-        id="results"
-        class="results hidden">
+    <main id="analyzer" class="container">
 
-        <div class="results-heading">
-
-            <div>
-
-                <span class="section-label">
-                    AI ANALYSIS
-                </span>
-
-                <h2>
-                    Candidate Intelligence Report
-                </h2>
-
-
-                <div class="analysis-meta">
-
-                    <span
-                        id="analysisTypeBadge"
-                        class="analysis-type-badge">
-                        CLAUDE
-                    </span>
-
-                    <span
-                        id="analysisDurationBadge"
-                        class="analysis-duration-badge">
-                        Completed in --
-                    </span>
-
-                    <span
-                        id="analysisDateBadge"
-                        class="analysis-duration-badge">
-                        --
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ================================================== -->
-        <!-- RECRUITER SNAPSHOT -->
-        <!-- ================================================== -->
-
-        <article class="panel recruiter-snapshot">
+        <section class="panel input-panel">
 
             <div class="section-title">
 
                 <div>
 
                     <span class="section-label">
-                        10-SECOND VIEW
+                        LIVE ANALYSIS
                     </span>
 
                     <h2>
-                        Recruiter Snapshot
+                        Analyze Candidate Fit
                     </h2>
 
+                    <p>
+                        Upload a PDF resume and paste the job description.
+                    </p>
+
+                </div>
+
+
+                <div id="modeBadge" class="mode-badge">
+                    Checking AI mode…
                 </div>
 
             </div>
 
 
-            <div class="snapshot-grid">
+            <div class="privacy-notice">
 
-                <div class="snapshot-card readiness-card">
+                <strong>
+                    Privacy:
+                </strong>
 
-                    <span>
-                        Interview Readiness
-                    </span>
+                Resume files are processed for analysis and are not
+                intentionally persisted by this application.
 
-                    <strong id="interviewReadiness">
-                        -
-                    </strong>
+            </div>
 
-                    <small id="interviewReadinessText">
-                        Waiting for analysis
-                    </small>
+
+            <div class="input-grid">
+
+                <div>
+
+                    <label for="resume">
+                        Resume PDF
+                    </label>
+
+                    <div id="dropZone" class="drop-zone">
+
+                        <input id="resume" type="file" accept=".pdf,application/pdf">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <strong>
+                            Choose a resume
+                        </strong>
+
+                        <span>
+                            or drag and drop a PDF
+                        </span>
+
+                        <small id="fileName">
+                            Maximum 10 MB
+                        </small>
+
+                    </div>
 
                 </div>
 
 
-                <div class="snapshot-card">
+                <div>
 
-                    <span>
-                        Top Strengths
-                    </span>
+                    <label for="jobDescription">
+                        Job Description
+                    </label>
 
-                    <ul id="topStrengths"></ul>
-
-                </div>
-
-
-                <div class="snapshot-card">
-
-                    <span>
-                        Top Risks
-                    </span>
-
-                    <ul id="topRisks"></ul>
+                    <textarea id="jobDescription" rows="16"
+                        placeholder="Paste the complete job description here..."></textarea>
 
                 </div>
 
             </div>
 
-        </article>
+
+            <div class="action-row">
+
+                <button id="analyzeButton" class="primary">
+                    Analyze with Claude
+                </button>
+
+                <button id="demoAnalysisButton" class="demo-secondary">
+                    ▶ Try Live Demo
+                </button>
+
+                <button id="resetButton" class="secondary">
+                    Reset
+                </button>
+
+            </div>
 
 
-        <!-- ================================================== -->
-        <!-- SCORE CARDS -->
-        <!-- ================================================== -->
-
-        <section class="score-grid">
-
-            <article class="score-card">
-
-                <span>
-                    Job Match
-                </span>
-
-                <strong id="matchScore">
-                    0%
-                </strong>
-
-                <div class="progress">
-                    <div
-                        id="matchProgress"
-                        class="progress-bar">
-                    </div>
-                </div>
-
-                <small id="matchLabel">
-                    Calculating...
-                </small>
-
-            </article>
-
-
-            <article class="score-card">
-
-                <span>
-                    ATS Score
-                </span>
-
-                <strong id="atsScore">
-                    0%
-                </strong>
-
-                <div class="progress">
-                    <div
-                        id="atsProgress"
-                        class="progress-bar">
-                    </div>
-                </div>
-
-                <small>
-                    Resume / JD alignment
-                </small>
-
-            </article>
-
-
-            <article class="score-card">
-
-                <span>
-                    Analysis Confidence
-                </span>
-
-                <strong id="confidenceScore">
-                    0%
-                </strong>
-
-                <div class="progress">
-                    <div
-                        id="confidenceProgress"
-                        class="progress-bar">
-                    </div>
-                </div>
-
-                <small>
-                    Evidence confidence
-                </small>
-
-            </article>
-
-
-            <article class="score-card recommendation-card">
-
-                <span>
-                    Hiring Recommendation
-                </span>
-
-                <strong id="hiringRecommendation">
-                    -
-                </strong>
-
-                <small id="recommendationDescription">
-                    Waiting for analysis
-                </small>
-
-            </article>
+            <p id="message" class="message">
+            </p>
 
         </section>
 
 
         <!-- ================================================== -->
-        <!-- EXECUTIVE ASSESSMENT -->
+        <!-- RESULTS -->
         <!-- ================================================== -->
 
-        <article class="panel verdict-panel">
+        <section id="results" class="results hidden">
 
-            <span class="section-label">
-                RECRUITER VIEW
-            </span>
-
-            <h2>
-                Executive Assessment
-            </h2>
-
-            <p
-                id="executiveAssessment"
-                class="large-text">
-            </p>
-
-        </article>
-
-
-        <!-- ================================================== -->
-        <!-- MATCHED / MISSING -->
-        <!-- ================================================== -->
-
-        <div class="two-col">
-
-            <article class="panel">
-
-                <span class="section-label success-text">
-                    MATCHED
-                </span>
-
-                <h2>
-                    Matched Skills
-                </h2>
-
-                <div
-                    id="matchedSkills"
-                    class="chips">
-                </div>
-
-            </article>
-
-
-            <article class="panel">
-
-                <span class="section-label warning-text">
-                    MISSING
-                </span>
-
-                <h2>
-                    Missing Skills
-                </h2>
-
-                <div
-                    id="missingSkills"
-                    class="chips warning">
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <!-- ================================================== -->
-        <!-- GAPS -->
-        <!-- ================================================== -->
-
-        <div class="two-col">
-
-            <article class="panel critical-panel">
-
-                <span class="section-label danger-text">
-                    HIGH IMPACT
-                </span>
-
-                <h2>
-                    Critical Gaps
-                </h2>
-
-                <p class="section-description">
-                    Requirements that may materially affect fit.
-                </p>
-
-                <div
-                    id="criticalGaps"
-                    class="chips danger">
-                </div>
-
-            </article>
-
-
-            <article class="panel">
-
-                <span class="section-label warning-text">
-                    SECONDARY
-                </span>
-
-                <h2>
-                    Preferred Gaps
-                </h2>
-
-                <p class="section-description">
-                    Preferred or easier-to-ramp requirements.
-                </p>
-
-                <div
-                    id="preferredGaps"
-                    class="chips warning">
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <!-- ================================================== -->
-        <!-- TRANSFERABLE -->
-        <!-- ================================================== -->
-
-        <article class="panel transferable-panel">
-
-            <span class="section-label info-text">
-                TRANSFERABLE EXPERIENCE
-            </span>
-
-            <h2>
-                Transferable Skills
-            </h2>
-
-            <p class="section-description">
-                Related experience that may reduce the impact
-                of technology or platform gaps.
-            </p>
-
-            <div
-                id="transferableSkills"
-                class="chips transferable">
-            </div>
-
-        </article>
-
-
-        <!-- ================================================== -->
-        <!-- STRENGTHS / WEAKNESSES -->
-        <!-- ================================================== -->
-
-        <div class="two-col">
-
-            <article class="panel">
-
-                <span class="section-label success-text">
-                    ADVANTAGES
-                </span>
-
-                <h2>
-                    Strengths
-                </h2>
-
-                <ul
-                    id="strengths"
-                    class="analysis-list positive-list">
-                </ul>
-
-            </article>
-
-
-            <article class="panel">
-
-                <span class="section-label warning-text">
-                    RISKS
-                </span>
-
-                <h2>
-                    Weaknesses
-                </h2>
-
-                <ul
-                    id="weaknesses"
-                    class="analysis-list">
-                </ul>
-
-            </article>
-
-        </div>
-
-
-        <!-- ================================================== -->
-        <!-- EVIDENCE -->
-        <!-- ================================================== -->
-
-        <article class="panel evidence-panel">
-
-            <span class="section-label info-text">
-                EXPLAINABLE AI
-            </span>
-
-            <h2>
-                Resume Evidence
-            </h2>
-
-            <p class="section-description">
-                Concrete resume evidence supporting the analysis.
-            </p>
-
-            <ul
-                id="resumeEvidence"
-                class="analysis-list evidence-list">
-            </ul>
-
-        </article>
-
-
-        <!-- ================================================== -->
-        <!-- ATS -->
-        <!-- ================================================== -->
-
-        <article class="panel">
-
-            <span class="section-label">
-                OPTIMIZATION
-            </span>
-
-            <h2>
-                ATS Recommendations
-            </h2>
-
-            <ul
-                id="atsRecommendations"
-                class="analysis-list">
-            </ul>
-
-        </article>
-
-
-        <!-- ================================================== -->
-        <!-- SUMMARY REWRITE -->
-        <!-- ================================================== -->
-
-        <article class="panel">
-
-            <div class="section-title with-action">
+            <div class="results-heading">
 
                 <div>
 
                     <span class="section-label">
-                        AI REWRITE
+                        AI ANALYSIS
                     </span>
 
                     <h2>
-                        Improved Summary
+                        Candidate Intelligence Report
                     </h2>
 
-                </div>
-
-                <button
-                    class="small-button"
-                    onclick="copyText('improvedSummary')">
-                    Copy
-                </button>
-
-            </div>
-
-
-            <div class="rewrite-box">
-
-                <p id="improvedSummary"></p>
-
-            </div>
-
-        </article>
-
-
-        <!-- ================================================== -->
-        <!-- BULLET REWRITE -->
-        <!-- ================================================== -->
-
-        <article class="panel">
-
-            <div class="section-title with-action">
-
-                <div>
-
-                    <span class="section-label">
-                        AI REWRITE
+                    <span id="analysisTypeBadge" class="analysis-type-badge">
+                        CLAUDE
                     </span>
 
-                    <h2>
-                        Improved Experience Bullets
-                    </h2>
+                    <span id="analysisDurationBadge" class="analysis-duration-badge">
+                        Completed in --
+                    </span>
 
+                    <span id="analysisDateBadge" class="analysis-duration-badge">
+                        --
+                    </span>
+
+                    <button id="topExportPdfBtn" type="button" class="secondary-action-button">
+                        Export PDF
+                    </button>
                 </div>
-
-                <button
-                    class="small-button"
-                    onclick="copyList('improvedBullets')">
-                    Copy
-                </button>
 
             </div>
 
 
-            <ul
-                id="improvedBullets"
-                class="analysis-list rewrite-list">
-            </ul>
+            <!-- ================================================== -->
+            <!-- RECRUITER SNAPSHOT -->
+            <!-- ================================================== -->
 
-        </article>
+            <article class="panel recruiter-snapshot">
 
+                <div class="section-title">
 
-        <!-- ================================================== -->
-        <!-- INTERVIEW -->
-        <!-- ================================================== -->
+                    <div>
 
-        <article class="panel interview-panel">
+                        <span class="section-label">
+                            10-SECOND VIEW
+                        </span>
 
-            <span class="section-label info-text">
-                PREPARATION
-            </span>
+                        <h2>
+                            Recruiter Snapshot
+                        </h2>
 
-            <h2>
-                Interview Focus Areas
-            </h2>
+                    </div>
 
-            <ol
-                id="interviewFocusAreas"
-                class="interview-list">
-            </ol>
-
-        </article>
+                </div>
 
 
-        <!-- ================================================== -->
-        <!-- EXPORT -->
-        <!-- ================================================== -->
+                <div class="snapshot-grid">
 
-        <article class="panel export-panel">
+                    <div class="snapshot-card readiness-card">
 
-            <div>
+                        <span>
+                            Interview Readiness
+                        </span>
+
+                        <strong id="interviewReadiness">
+                            -
+                        </strong>
+
+                        <small id="interviewReadinessText">
+                            Waiting for analysis
+                        </small>
+
+                    </div>
+
+
+                    <div class="snapshot-card">
+
+                        <span>
+                            Top Strengths
+                        </span>
+
+                        <ul id="topStrengths"></ul>
+
+                    </div>
+
+
+                    <div class="snapshot-card">
+
+                        <span>
+                            Top Risks
+                        </span>
+
+                        <ul id="topRisks"></ul>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- SCORE CARDS -->
+            <!-- ================================================== -->
+
+            <section class="score-grid">
+
+                <article class="score-card">
+
+                    <span>
+                        Job Match
+                    </span>
+
+                    <strong id="matchScore">
+                        0%
+                    </strong>
+
+                    <div class="progress">
+                        <div id="matchProgress" class="progress-bar">
+                        </div>
+                    </div>
+
+                    <small id="matchLabel">
+                        Calculating...
+                    </small>
+
+                </article>
+
+
+                <article class="score-card">
+
+                    <span>
+                        ATS Score
+                    </span>
+
+                    <strong id="atsScore">
+                        0%
+                    </strong>
+
+                    <div class="progress">
+                        <div id="atsProgress" class="progress-bar">
+                        </div>
+                    </div>
+
+                    <small>
+                        Resume / JD alignment
+                    </small>
+
+                </article>
+
+
+                <article class="score-card">
+
+                    <span>
+                        Analysis Confidence
+                    </span>
+
+                    <strong id="confidenceScore">
+                        0%
+                    </strong>
+
+                    <div class="progress">
+                        <div id="confidenceProgress" class="progress-bar">
+                        </div>
+                    </div>
+
+                    <small>
+                        Evidence confidence
+                    </small>
+
+                </article>
+
+
+                <article class="score-card recommendation-card">
+
+                    <span>
+                        Hiring Recommendation
+                    </span>
+
+                    <strong id="hiringRecommendation">
+                        -
+                    </strong>
+
+                    <small id="recommendationDescription">
+                        Waiting for analysis
+                    </small>
+
+                </article>
+
+            </section>
+
+
+            <!-- ================================================== -->
+            <!-- EXECUTIVE ASSESSMENT -->
+            <!-- ================================================== -->
+
+            <article class="panel verdict-panel">
 
                 <span class="section-label">
-                    EXPORT
+                    RECRUITER VIEW
                 </span>
 
                 <h2>
-                    Save Your Analysis
+                    Executive Assessment
                 </h2>
 
-                <p>
-                    Export the structured report for later review.
+                <p id="executiveAssessment" class="large-text">
                 </p>
 
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- MATCHED / MISSING -->
+            <!-- ================================================== -->
+
+            <div class="two-col">
+
+                <article class="panel">
+
+                    <span class="section-label success-text">
+                        MATCHED
+                    </span>
+
+                    <h2>
+                        Matched Skills
+                    </h2>
+
+                    <div id="matchedSkills" class="chips">
+                    </div>
+
+                </article>
+
+
+                <article class="panel">
+
+                    <span class="section-label warning-text">
+                        MISSING
+                    </span>
+
+                    <h2>
+                        Missing Skills
+                    </h2>
+
+                    <div id="missingSkills" class="chips warning">
+                    </div>
+
+                </article>
+
             </div>
 
 
-            <div class="export-actions">
+            <!-- ================================================== -->
+            <!-- GAPS -->
+            <!-- ================================================== -->
 
-                <button
-                    id="downloadJsonButton"
-                    class="secondary">
-                    Export JSON
-                </button>
+            <div class="two-col">
 
-                <button
-                    id="analyzeAnotherButton"
-                    class="primary">
-                    Analyze Another
-                </button>
+                <article class="panel critical-panel">
+
+                    <span class="section-label danger-text">
+                        HIGH IMPACT
+                    </span>
+
+                    <h2>
+                        Critical Gaps
+                    </h2>
+
+                    <p class="section-description">
+                        Requirements that may materially affect fit.
+                    </p>
+
+                    <div id="criticalGaps" class="chips danger">
+                    </div>
+
+                </article>
+
+
+                <article class="panel">
+
+                    <span class="section-label warning-text">
+                        SECONDARY
+                    </span>
+
+                    <h2>
+                        Preferred Gaps
+                    </h2>
+
+                    <p class="section-description">
+                        Preferred or easier-to-ramp requirements.
+                    </p>
+
+                    <div id="preferredGaps" class="chips warning">
+                    </div>
+
+                </article>
 
             </div>
 
-        </article>
+
+            <!-- ================================================== -->
+            <!-- TRANSFERABLE -->
+            <!-- ================================================== -->
+
+            <article class="panel transferable-panel">
+
+                <span class="section-label info-text">
+                    TRANSFERABLE EXPERIENCE
+                </span>
+
+                <h2>
+                    Transferable Skills
+                </h2>
+
+                <p class="section-description">
+                    Related experience that may reduce the impact
+                    of technology or platform gaps.
+                </p>
+
+                <div id="transferableSkills" class="chips transferable">
+                </div>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- STRENGTHS / WEAKNESSES -->
+            <!-- ================================================== -->
+
+            <div class="two-col">
+
+                <article class="panel">
+
+                    <span class="section-label success-text">
+                        ADVANTAGES
+                    </span>
+
+                    <h2>
+                        Strengths
+                    </h2>
+
+                    <ul id="strengths" class="analysis-list positive-list">
+                    </ul>
+
+                </article>
+
+
+                <article class="panel">
+
+                    <span class="section-label warning-text">
+                        RISKS
+                    </span>
+
+                    <h2>
+                        Weaknesses
+                    </h2>
+
+                    <ul id="weaknesses" class="analysis-list">
+                    </ul>
+
+                </article>
+
+            </div>
+
+
+            <!-- ================================================== -->
+            <!-- EVIDENCE -->
+            <!-- ================================================== -->
+
+            <article class="panel evidence-panel">
+
+                <span class="section-label info-text">
+                    EXPLAINABLE AI
+                </span>
+
+                <h2>
+                    Resume Evidence
+                </h2>
+
+                <p class="section-description">
+                    Concrete resume evidence supporting the analysis.
+                </p>
+
+                <ul id="resumeEvidence" class="analysis-list evidence-list">
+                </ul>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- ATS -->
+            <!-- ================================================== -->
+
+            <article class="panel">
+
+                <span class="section-label">
+                    OPTIMIZATION
+                </span>
+
+                <h2>
+                    ATS Recommendations
+                </h2>
+
+                <ul id="atsRecommendations" class="analysis-list">
+                </ul>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- SUMMARY REWRITE -->
+            <!-- ================================================== -->
+
+            <article class="panel">
+
+                <div class="section-title with-action">
+
+                    <div>
+
+                        <span class="section-label">
+                            AI REWRITE
+                        </span>
+
+                        <h2>
+                            Improved Summary
+                        </h2>
+
+                    </div>
+
+                    <button class="small-button" onclick="copyText('improvedSummary')">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div class="rewrite-box">
+
+                    <p id="improvedSummary"></p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- BULLET REWRITE -->
+            <!-- ================================================== -->
+
+            <article class="panel">
+
+                <div class="section-title with-action">
+
+                    <div>
+
+                        <span class="section-label">
+                            AI REWRITE
+                        </span>
+
+                        <h2>
+                            Improved Experience Bullets
+                        </h2>
+
+                    </div>
+
+                    <button class="small-button" onclick="copyList('improvedBullets')">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <ul id="improvedBullets" class="analysis-list rewrite-list">
+                </ul>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- INTERVIEW -->
+            <!-- ================================================== -->
+
+            <article class="panel interview-panel">
+
+                <span class="section-label info-text">
+                    PREPARATION
+                </span>
+
+                <h2>
+                    Interview Focus Areas
+                </h2>
+
+                <ol id="interviewFocusAreas" class="interview-list">
+                </ol>
+
+            </article>
+
+
+            <!-- ================================================== -->
+            <!-- EXPORT -->
+            <!-- ================================================== -->
+
+            <article class="panel export-panel">
+
+                <div>
+
+                    <span class="section-label">
+                        EXPORT
+                    </span>
+
+                    <h2>
+                        Save Your Analysis
+                    </h2>
+
+                    <p>
+                        Export the structured report for later review.
+                    </p>
+
+                </div>
+
+
+                <div class="export-actions">
+                    <button id="exportPdfBtn" type="button" class="secondary-action-button">
+                        Export PDF
+                    </button>
+
+                    <button id="analyzeAnotherButton" type="button" class="primary-action-button">
+                        Analyze Another
+                    </button>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- ====================================================== -->
+    <!-- TECH STACK -->
+    <!-- ====================================================== -->
+
+    <section class="tech-section">
+
+        <div class="container">
+
+            <span class="section-label">
+                BUILT WITH
+            </span>
+
+            <div class="tech-row">
+
+                <span>Java 17</span>
+                <span>Spring Boot</span>
+                <span>Spring AI</span>
+                <span>Anthropic Claude</span>
+                <span>PDFBox</span>
+                <span>Gradle</span>
+
+            </div>
+
+        </div>
 
     </section>
 
-</main>
 
+    <footer>
 
-<!-- ====================================================== -->
-<!-- TECH STACK -->
-<!-- ====================================================== -->
+        <div class="container">
 
-<section class="tech-section">
-
-    <div class="container">
-
-        <span class="section-label">
-            BUILT WITH
-        </span>
-
-        <div class="tech-row">
-
-            <span>Java 17</span>
-            <span>Spring Boot</span>
-            <span>Spring AI</span>
-            <span>Anthropic Claude</span>
-            <span>PDFBox</span>
-            <span>Gradle</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    <div class="container">
-
-        <strong>
-            AI Candidate Intelligence Platform
-        </strong>
-
-        <span>
-            Built as a hands-on Generative AI engineering project.
-        </span>
-
-    </div>
-
-</footer>
-
-
-<!-- ====================================================== -->
-<!-- ANALYSIS LOADING OVERLAY -->
-<!-- ====================================================== -->
-
-<div
-    id="loadingOverlay"
-    class="loading-overlay hidden">
-
-    <div class="loading-card">
-
-        <div
-            id="loadingSpinner"
-            class="loader">
-        </div>
-
-
-        <div
-            id="analysisCompleteIcon"
-            class="analysis-complete-icon hidden">
-            ✓
-        </div>
-
-
-        <h2 id="loadingTitle">
-            Claude AI Live Analysis
-        </h2>
-
-
-        <p id="loadingDescription">
-            Claude is evaluating candidate-job fit using resume evidence
-            and job requirements.
-        </p>
-
-
-        <p
-            id="typicalAnalysisTime"
-            class="typical-time">
-            Typical analysis time: 30–60 seconds
-        </p>
-
-
-        <div class="elapsed-time">
-
-            <span>
-                Elapsed
-            </span>
-
-            <strong id="elapsedTimer">
-                00:00
+            <strong>
+                AI Candidate Intelligence Platform
             </strong>
 
-        </div>
-
-
-        <div class="loading-steps">
-
-            <div
-                id="loadingStep1"
-                class="loading-step active">
-
-                <span>1</span>
-
-                Reading resume and job description
-
-            </div>
-
-
-            <div
-                id="loadingStep2"
-                class="loading-step">
-
-                <span>2</span>
-
-                Understanding role requirements
-
-            </div>
-
-
-            <div
-                id="loadingStep3"
-                class="loading-step">
-
-                <span>3</span>
-
-                Matching candidate evidence
-
-            </div>
-
-
-            <div
-                id="loadingStep4"
-                class="loading-step">
-
-                <span>4</span>
-
-                Generating hiring recommendations
-
-            </div>
+            <span>
+                Built as a hands-on Generative AI engineering project.
+            </span>
 
         </div>
 
+    </footer>
 
-        <small id="loadingStatusText">
-            Reading resume and job description...
-        </small>
+
+    <!-- ====================================================== -->
+    <!-- ANALYSIS LOADING OVERLAY -->
+    <!-- ====================================================== -->
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+
+        <div class="loading-card">
+
+            <div id="loadingSpinner" class="loader">
+            </div>
+
+
+            <div id="analysisCompleteIcon" class="analysis-complete-icon hidden">
+                ✓
+            </div>
+
+
+            <h2 id="loadingTitle">
+                Claude AI Live Analysis
+            </h2>
+
+
+            <p id="loadingDescription">
+                Claude is evaluating candidate-job fit using resume evidence
+                and job requirements.
+            </p>
+
+
+            <p id="typicalAnalysisTime" class="typical-time">
+                Typical analysis time: 30–60 seconds
+            </p>
+
+
+            <div class="elapsed-time">
+
+                <span>
+                    Elapsed
+                </span>
+
+                <strong id="elapsedTimer">
+                    00:00
+                </strong>
+
+            </div>
+
+
+            <div class="loading-steps">
+
+                <div id="loadingStep1" class="loading-step active">
+
+                    <span>1</span>
+
+                    Reading resume and job description
+
+                </div>
+
+
+                <div id="loadingStep2" class="loading-step">
+
+                    <span>2</span>
+
+                    Understanding role requirements
+
+                </div>
+
+
+                <div id="loadingStep3" class="loading-step">
+
+                    <span>3</span>
+
+                    Matching candidate evidence
+
+                </div>
+
+
+                <div id="loadingStep4" class="loading-step">
+
+                    <span>4</span>
+
+                    Generating hiring recommendations
+
+                </div>
+
+            </div>
+
+
+            <small id="loadingStatusText">
+                Reading resume and job description...
+            </small>
+
+        </div>
 
     </div>
 
-</div>
 
-
-<script src="/app.js"></script>
+    <script src="/app.js"></script>
 
 </body>
 
